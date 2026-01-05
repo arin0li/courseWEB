@@ -12,3 +12,13 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .attraction-card__content {
+    position: relative;
+    padding: 145px 15px !important;
+    justify-content: center;
+    gap: 14px;
+    align-items: flex-start;
+  }
+}
+
