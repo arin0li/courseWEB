@@ -53,10 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
               data-route-image="${route.image}">
         <i class="far fa-heart"></i>
       </button>
-      <picture>
-        <source type="image/webp" srcset="${route.image.replace(/\.(jpg|jpeg|png)$/i, '.webp')}">
-        <img src="${route.image}" alt="${route.title}" class="route-card__img" loading="lazy" decoding="async" fetchpriority="low">
-      </picture>
+      <img src="${route.image}" alt="${route.title}" class="route-card__img" loading="lazy" decoding="async" fetchpriority="low">
       <div class="route-card__content">
         <h3 class="route-card__title">${route.title}</h3>
         <p class="route-card__region">${regionText}</p>
