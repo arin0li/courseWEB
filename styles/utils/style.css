@@ -4016,3 +4016,17 @@ body {
         }
 }
 
+/* Исправление ошибки валидатора для Font Awesome rotate */
+:root {
+  --fa-rotate-angle: 0deg;
+}
+
+/* Переопределение неправильного использования rotate с none */
+[class*="fa-"] {
+  --fa-rotate-angle: 0deg;
+}
+
+[class*="fa-rotate"] {
+  transform: rotate(var(--fa-rotate-angle, 0deg));
+}
+
