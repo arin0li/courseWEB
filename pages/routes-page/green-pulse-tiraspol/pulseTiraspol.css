@@ -5,6 +5,11 @@
     font-style: normal;
   }
 
+.form-title,
+.result-title {
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* ============================================
    АНИМАЦИИ
    ============================================ */
