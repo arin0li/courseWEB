@@ -1,0 +1,20 @@
+/* Basic styles */
+@import url('../../../styles/base/reset.css');
+@import url('../../../styles/variables/colors.css');
+@import url('../../../styles/base/typography.css');
+@import url('../../../styles/utils/helpers.css');
+
+/* Common blocks */
+@import url('../../../blocks/header/header.css');
+@import url('../../../blocks/footer/footer.css');
+@import url('../../../blocks/modal/modal.css');
+@import url('../../../blocks/favorites/favorites.css');
+
+/* Specific blocks */
+@import url('../../../blocks/card/card.css');
+@import url('../../../blocks/image-viewer/image-viewer.css');
+@import url('../../../blocks/quick-view/quick-view.css');
+
+/* Page-specific overrides (keeps original page styles) */
+@import url('turunchuk.css');
+

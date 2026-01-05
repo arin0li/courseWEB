@@ -1,0 +1,695 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="park-rodina.css">
+            <link rel="stylesheet" href="../../../styles/utils/helpers.css">
+            <link rel="stylesheet" href="../../../styles/utils/style.css?v=5">
+            <script src="../../../scripts/utils/favorites.js"></script>
+            <link rel="icon" type="image/png" href="../../../images/common/icons/icon-site.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>   
+      </head>
+
+      <body>
+        <header class="header">
+            <div class="header__container">
+                <div class="logo">
+                  <h1 class="logo__title">EcoTravel<br>Приднестровье</h1>
+                </div>
+           
+                <nav class="nav">
+                  <div class="burger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <ul class="nav__list">
+                    <li class="nav__item"><a href="../../../index.html#hero" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="../../../pages/routes-page/index.html" class="nav__link">Маршруты</a></li>
+                    <li class="nav__item"><a href="../../../pages/region-map/index.html" class="nav__link">Карта региона</a></li>
+                    <li class="nav__item"><a href="../../../pages/attraction-page/index.html" class="nav__link">Достопримечательности</a></li>
+                    <li class="nav__item"><a href="../../../pages/tips-page/index.html" class="nav__link">Советы путешественникам</a></li>
+                    <li class="nav__item"><a href="../../../index.html#about" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="../../../index.html#contact" class="nav__link">Контакты</a></li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link favorites-link" id="favoritesLink">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorites-count" style="display: none;">0</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </header>
+        <!-- БЛОК-ГЕРОЙ НА СТРАНИЦЕ МАРШРУТОВ -->
+        <section id="vinogradny-hero" class="vinogradny-hero">
+            <!-- Фоновое изображение -->
+            <div class="vinogradny-hero__bg"></div>
+          
+            <!-- Тёмный оверлей — точно как в карточках -->
+            <div class="vinogradny-hero__overlay"></div>
+          
+            <!-- Заголовок -->
+            <h1 class="vinogradny-hero__title">
+              ПАРК ИМЕНИ Д.К. РОДИНА
+            </h1>
+          </section>
+
+
+          <div class="container">
+
+            <div class="content-wrapper">
+        
+                <!-- Левый блок -->
+                <div class="left-block">
+        
+                    <div class="card">
+                        <h2>Описание</h2>
+                        <p>Парк Д.К. «Родина» — уникальный природно-скульптурный ансамбль площадью 4 гектара, заложенный в 1958 году ветераном войны и талантливым скульптором Дмитрием Кирилловичем Родином. Автор видел парк как «храм природы», где деревья становятся стенами, камень — символом духа, вода — началом жизни, а небо — куполом.<br><br></p>
+        
+                        <p>В парке много скрытых символов и замыслов автора: Восточная скала при определённом ракурсе открывает профиль Родина, глядящего в небо, «Скала раздумий» отражается в воде, превращаясь в крыло птицы, а солнечный грот в определённые минуты освещает статую девушки Аурики золотым светом.<br><br></p>
+        
+                        <p>В 1982 году проект получил Диплом I степени и Большую золотую медаль ВДНХ СССР, войдя в пятёрку лучших парков Советского Союза. После смерти Родина парк получил его имя и стал чем-то большим, чем просто зелёная зона — это место смыслов, символов и живой природы.</p>
+        
+                        <h2>Интересные факты:</h2>
+                        <ul>
+                            <li>Парк задумывался как “храм природы”, где деревья — это стены, вода — начало жизни, камень — твёрдость духа, а небо — купол.</li>
+                            <li>Главная скульптура «Жажда» символизирует поклонение воде, а Родин называл её “девушкой, встречающей посетителей как жрица природного храма”.</li>
+                            <li>Парк строился почти 25 лет, совершенствовался постоянно и никогда не был “завершён” по мнению автора — он считал его живым организмом.</li>
+                            <li>Все водоёмы парка связаны одной скрытой системой, вода каскадом стекает сверху вниз, оживляя пруды и фонтаны.</li>
+                        </ul>
+        
+                        <h2>Парк имени Д.К. Родина:</h2>
+                        <p><strong>Регион:</strong> Днестровск, Чобручи</p>
+                        <p><strong>Расположение:</strong> с. Чобручи, ул. Ленина</p>
+                        <p><strong>Точные координаты:</strong> 46.6818039262148, 29.756264700000003</p>
+                        <p><strong>Сезон посещения:</strong> круглый год</p>
+                        <p><strong>Доступность:</strong> автомобиль, велосипед, пеший подъём</p>
+                        <p><strong>Продолжительность прогулки:</strong> 30–90 минут</p>
+                        <p><strong>Сложность:</strong> лёгкая</p>
+                    </div>
+        
+                </div>
+        
+                <!-- Правая колонка -->
+                <div class="right-column">
+        
+                    <!-- Галерея -->
+                    <div class="gallery-container">
+                        <div class="gallery">
+                            <div class="gallery-track" id="galleryTrack">
+                                <div class="gallery-image"><img src="../../../../../images/content/attractions/park-rodina/rodina.jpg" alt=""></div>
+                                <div class="gallery-image"><img src="../../../../../images/content/attractions/park-rodina/rodina1.jpg"></div>
+                                <div class="gallery-image"><img src="../../../../../images/content/attractions/park-rodina/rodina2.jpg"></div> 
+                                <div class="gallery-image"><img src="../../../../../images/content/attractions/park-rodina/rodina3.jpg"></div>    
+                                <div class="gallery-image"><img src="../../../../../images/content/attractions/park-rodina/rodina4.jpg"></div>  
+                                <div class="gallery-image"><img src="../../../../../images/content/attractions/park-rodina/rodina6.jpg"></div>  
+                                <div class="gallery-image"><img src="../../../../../images/content/attractions/park-rodina/rodina7.jpg"></div>  
+                            </div>                            
+                        </div>
+                        <button class="nav-btn prev" onclick="moveSlide(-1)"><img src="../../../../../images/content/attractions/park-rodina/back.png" alt="back"></button>
+                            <button class="nav-btn next" onclick="moveSlide(1)"><img src="../../../../../images/content/attractions/park-rodina/next.png" alt="next"></button>
+                    </div>
+        
+                    <!-- Блок под галереей -->
+                    <div class="card tips-block">
+                        <h2>Советы<br>путешественникам:</h2>
+        
+                        <p><strong>Лучшее время для посещения:</strong>утро — мягкий свет и прохлада; день — удобное время для семейных прогулок; вечер — уютная атмосфера и подсветка ДК.</p>
+        
+                        <p><strong><br>Возьмите с собой:</strong> Воду, головной убор летом, удобную обувь, лёгкий перекус, плед для отдыха на траве.</p>
+        
+                        <p><strong><br> Бережно относитесь к зелёным насаждениям, не мусорьте, не вытаптывайте газоны, соблюдайте тишину вечером.</strong></p>
+                    </div>
+        
+                </div>
+            </div>
+        
+            <!-- Нижний горизонтальный блок -->
+            <div class="bottom-block">
+        
+                <div class="card">
+        
+                    <h2 class="bottom-title">Как добраться:</h2>
+        
+                    <p>
+                        <strong>На автомобиле:</strong> Ехать в село Чобручи (Слободзейский район). Въезжая в село со стороны Тирасполя, двигайтесь по центральной улице (ул. Ленина) до Дома культуры. Парк расположен прямо за зданием ДК Родина — у дороги есть удобные места для парковки.
+                    </p>
+        
+                    <p><strong>Маршрутка:</strong>Из Тирасполя регулярно ходят маршрутки в Чобручи (направление: “Тирасполь — Чобручи”). Выходить нужно на остановке у Дома культуры. От остановки до центрального входа в парк — 1–2 минуты пешком.
+                      Ознакомиться с расписанием и подробным маршрутом можно
+                        <a href="https://wikiroutes.info/dnestrovsk?routes=108003" target="_blank">здесь</a>.
+                    </p>
+                    <p><strong>Парковка:</strong> Возле Дома культуры и вдоль дороги рядом с входом в парк. Бесплатно. В тёплые дни может быть частично занято.</p>
+                    <button class="nature-button" onclick="location.href='#nature-handbook'">Ознакомиться с природой</button>
+                </div>
+        
+        
+            </div>
+        
+        </div>
+
+
+        <!-- СПРАВОЧНИК ПРИРОДЫ -->
+        <section class="nature-handbook" id="nature-handbook">
+          <div class="handbook-header">
+              <h2 class="handbook-title">Справочник природы</h2>
+          </div>
+      
+          <div class="handbook-content">
+      
+              <!-- РАСТЕНИЯ -->
+              <div class="category">
+                  <div class="category-header">
+                      <h3 class="category-title">РАСТЕНИЯ</h3>
+                      <!-- Кнопка подробнее для всего ряда растений -->
+                      <span class="category-details" onclick="openModal('plants')">
+                        Подробнее
+                    </span>
+                  </div>
+                  <div class="cards-grid">
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/klen.jpeg" alt="Клён ясенелистный">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Клён ясенелистный</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/lipa.jpg" alt="Липа сердцевидная">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Липа сердцевидная</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/bereza.jpg" alt="Берёза повислая">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Берёза повислая</div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- ЖИВОТНЫЕ -->
+              <div class="category">
+                  <div class="category-header">
+                      <h3 class="category-title animal-title">ЖИВОТНЫЕ</h3>
+                      <!-- Кнопка подробнее для всего ряда животных -->
+                      <span class="category-details" onclick="openModal('animals')">
+                        Подробнее
+                    </span>
+                  </div>
+                  <div class="cards-grid">
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/vorobei-domovii1.jpg" alt="Домовый воробей">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Домовый воробей</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/vorona.jpeg" alt="Серая ворона">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Серая ворона</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/scvorec.jpg" alt="Скворец">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Скворец</div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- ГРИБЫ -->
+              <div class="category mushrooms">
+                  <div class="mushrooms-header">
+                      <h3 class="mushrooms-main-title">ГРИБЫ</h3>
+                      <div class="mushrooms-subtitles">
+                          <span class="poisonous">ЯДОВИТЫЕ</span>
+                          <span class="edible">СЪЕДОБНЫЕ</span>
+                      </div>
+                      <!-- Кнопка подробнее для грибов -->
+                      <span class="category-details" onclick="openModal('mushrooms')">
+                        Подробнее
+                    </span>
+                  </div>
+                  <!-- Сетка грибов с кастомными gap -->
+                  <div class="mushrooms-grid">
+                      <!-- Ядовитые -->
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/lisichka.jpg" alt="Лисичка ложная">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Лисичка ложная</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/poganka.jpg" alt="Бледная поганка">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Поганка бледная</div>
+                      </div>
+      
+                      <!-- Съедобные -->
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/shampin.jpg" alt="Шампиньон">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Шампиньон луговой</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../../../images/content/attractions/park-rodina/navoznik.jpg" alt="Моховик">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Моховик жёлто-бурый</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <!-- Модальные окна -->
+      <!-- Модальное окно для растений -->
+      <div id="plantsModal" class="modal">
+          <div class="modal-content">
+              <span class="close-button" onclick="closeModal('plantsModal')">&times;</span>
+              <h3>Растения парка</h3>
+              
+              <div class="modal-item">
+                  <h4>1. Клён ясенелистный</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/klen.jpeg" alt="Клён ясенелистный">
+                  <p><strong>Описание:</strong> Быстрорастущее дерево с широкой раскидистой кроной и крупными листьями.</p>
+                  <p><strong>Место обитания:</strong> Вдоль центральных дорожек парка.</p>
+                  <p><strong>Интересный факт:</strong> Даёт широкую тень и быстро растёт, создавая уютные аллеи.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>2. Липа сердцевидная</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/lipa.jpg" alt="Липа сердцевидная">
+                  <p><strong>Описание:</strong> Крупное дерево с душистыми цветами и крупной листвой.</p>
+                  <p><strong>Место обитания:</strong> Аллеи и центральные дорожки парка.</p>
+                  <p><strong>Интересный факт:</strong> Цветы липы привлекают десятки видов пчёл одновременно.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>3. Берёза повислая</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/bereza.jpg" alt="Берёза повислая">
+                  <p><strong>Описание:</strong> Стройное дерево с белой корой и ажурной кроной.</p>
+                  <p><strong>Место обитания:</strong> Около мостиков и прудов парка.</p>
+                  <p><strong>Интересный факт:</strong> Создаёт лёгкую ажурную тень, идеальную для отдыха у воды.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>4. Каштан конский</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/kashtan.jpg" alt="Каштан конский">
+                  <p><strong>Описание:</strong> Крупное дерево с пальчатыми листьями и эффектными соцветиями.</p>
+                  <p><strong>Место обитания:</strong> Ближе к каскадам и водным композициям.</p>
+                  <p><strong>Интересный факт:</strong> Весной украшает парк крупными белыми свечами соцветий.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>5. Сирень обыкновенная</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/siren.jpg" alt="Сирень обыкновенная">
+                  <p><strong>Описание:</strong> Кустарник с душистыми метельчатыми соцветиями.</p>
+                  <p><strong>Место обитания:</strong> Возле гротов и каменных композиций.</p>
+                  <p><strong>Интересный факт:</strong> В мае становится самым ароматным местом парка.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>6. Жасмин садовый</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/jasmin.jpg" alt="Жасмин садовый">
+                  <p><strong>Описание:</strong> Декоративный кустарник с белыми ароматными цветами.</p>
+                  <p><strong>Место обитания:</strong> У дорожек к водоёмам и прудам.</p>
+                  <p><strong>Интересный факт:</strong> Летом источает сильный сладкий запах, привлекающий насекомых.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>7. Роза парковая</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/rose.jpg" alt="Роза парковая">
+                  <p><strong>Описание:</strong> Красивый кустарник с крупными махровыми цветами.</p>
+                  <p><strong>Место обитания:</strong> На клумбах и цветниках парка.</p>
+                  <p><strong>Интересный факт:</strong> Цветёт долго и ярко благодаря солнечному участку.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>8. Можжевельник казацкий</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/mojevel.jpg" alt="Можжевельник казацкий">
+                  <p><strong>Описание:</strong> Хвойный стелющийся кустарник с чешуйчатой хвоей.</p>
+                  <p><strong>Место обитания:</strong> У каменных композиций и скульптур.</p>
+                  <p><strong>Интересный факт:</strong> Устойчив к засухе и придаёт хвойный аромат парку.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>9. Ель голубая</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/el.jpg" alt="Ель голубая">
+                  <p><strong>Описание:</strong> Декоративное хвойное дерево с голубоватой хвоей.</p>
+                  <p><strong>Место обитания:</strong> Около Дома культуры.</p>
+                  <p><strong>Интересный факт:</strong> Декоративная порода, которая сохраняет цвет круглый год.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>10. Туя западная</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/Tuya-zapadnaya-Smaragd.jpg" alt="Туя западная">
+                  <p><strong>Описание:</strong> Вечнозелёное хвойное дерево с пирамидальной кроной.</p>
+                  <p><strong>Место обитания:</strong> Образует зелёные коридоры вдоль дорожек.</p>
+                  <p><strong>Интересный факт:</strong> Хорошо переносит стрижку и используется для создания живых изгородей.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>11. Шиповник морщинистый</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/shipovnik.jpg" alt="Шиповник морщинистый">
+                  <p><strong>Описание:</strong> Колючий кустарник с ароматными розовыми цветами.</p>
+                  <p><strong>Место обитания:</strong> Вдоль тропинок и дорожек парка.</p>
+                  <p><strong>Интересный факт:</strong> Осенью украшен яркими плодами, богатыми витамином C.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>12. Осока высокая</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/osoka.jpg" alt="Осока высокая">
+                  <p><strong>Описание:</strong> Травянистое растение с длинными узкими листьями.</p>
+                  <p><strong>Место обитания:</strong> У воды и по берегам прудов.</p>
+                  <p><strong>Интересный факт:</strong> Помогает укреплять влажные берега прудов, предотвращая эрозию.</p>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Модальное окно для животных -->
+      <div id="animalsModal" class="modal">
+          <div class="modal-content">
+              <span class="close-button" onclick="closeModal('animalsModal')">&times;</span>
+              <h3>Животные парка</h3>
+              
+              <div class="modal-item">
+                  <h4>1. Домовый воробей</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/vorobei-domovii1.jpg" alt="Домовый воробей">
+                  <p><strong>Описание:</strong> Маленькая птица с коричневым оперением и чёрным горлом.</p>
+                  <p><strong>Место обитания:</strong> В кустарниках и на деревьях парка.</p>
+                  <p><strong>Интересный факт:</strong> Остаётся активным даже зимой, адаптируется к городским условиям.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>2. Серая ворона</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/vorona.jpeg" alt="Серая ворона">
+                  <p><strong>Описание:</strong> Крупная птица с серым телом и чёрными крыльями и головой.</p>
+                  <p><strong>Место обитания:</strong> Чаще у входа и на открытых площадках парка.</p>
+                  <p><strong>Интересный факт:</strong> Собирает еду смело и наблюдательно, одна из самых умных птиц.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>3. Скворец</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/scvorec.jpg" alt="Скворец">
+                  <p><strong>Описание:</strong> Птица среднего размера с чёрным оперением и металлическим отливом.</p>
+                  <p><strong>Место обитания:</strong> На елях и липах парка.</p>
+                  <p><strong>Интересный факт:</strong> Часто поёт весной и имитирует звуки других птиц и даже механические звуки.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>4. Синица большая</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/sinica.jpg" alt="Синица большая">
+                  <p><strong>Описание:</strong> Небольшая птица с жёлтой грудью и чёрной головой.</p>
+                  <p><strong>Место обитания:</strong> На хвойных деревьях парка.</p>
+                  <p><strong>Интересный факт:</strong> Активно ловит насекомых, может висеть вниз головой на ветках.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>5. Голубь сизый</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/rock-dove.jpg" alt="Голубь сизый">
+                  <p><strong>Описание:</strong> Крупная птица с серо-голубым оперением и переливающейся шеей.</p>
+                  <p><strong>Место обитания:</strong> Всегда на центральных аллеях парка.</p>
+                  <p><strong>Интересный факт:</strong> Быстро привыкает к людям и может брать корм с рук.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>6. Зелёная пролесковая лягушка</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/lyagushkajpg.jpg" alt="Зелёная пролесковая лягушка">
+                  <p><strong>Описание:</strong> Небольшая лягушка с зелёной или коричневой окраской.</p>
+                  <p><strong>Место обитания:</strong> Возле воды и прудов парка.</p>
+                  <p><strong>Интересный факт:</strong> Прячется в тени растений, активна в сумерках.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>7. Ёж обыкновенный</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/ej.jpg" alt="Ёж обыкновенный">
+                  <p><strong>Описание:</strong> Небольшое млекопитающее, покрытое иглами.</p>
+                  <p><strong>Место обитания:</strong> У дальних тропинок и в зарослях парка.</p>
+                  <p><strong>Интересный факт:</strong> Выходит вечером и питается жуками и слизнями, полезен для сада.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>8. Белка обыкновенная</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/belka.jpg" alt="Белка обыкновенная">
+                  <p><strong>Описание:</strong> Пушистый грызун с рыжей шерстью и пушистым хвостом.</p>
+                  <p><strong>Место обитания:</strong> На высоких деревьях парка.</p>
+                  <p><strong>Интересный факт:</strong> Иногда подходит к людям за лакомствами, делает запасы на зиму.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>9. Нетопырь карлик</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/netopir.jpg" alt="Нетопырь карлик">
+                  <p><strong>Описание:</strong> Маленькая летучая мышь с коричневым мехом.</p>
+                  <p><strong>Место обитания:</strong> Над водой и прудами парка.</p>
+                  <p><strong>Интересный факт:</strong> Летает к сумеркам и уничтожает комаров, используя эхолокацию.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>10. Садовая улитка</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/ulitka.jpg" alt="Садовая улитка">
+                  <p><strong>Описание:</strong> Моллюск с раковиной и мягким телом.</p>
+                  <p><strong>Место обитания:</strong> В тени кустов и на влажных участках.</p>
+                  <p><strong>Интересный факт:</strong> Появляется после дождей, активна в тени, оставляет следы слизи.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>11. Серая мышь-малютка</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/mish.jpg" alt="Серая мышь-малютка">
+                  <p><strong>Описание:</strong> Очень маленький грызун с серой шерстью.</p>
+                  <p><strong>Место обитания:</strong> Около камней и гротов парка.</p>
+                  <p><strong>Интересный факт:</strong> Строит маленькие гнёзда в листве, один из самых маленьких грызунов.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>12. Обыкновенный уж</h4>
+                  <img src="../../../../../images/content/attractions/park-rodina/uj.jpg" alt="Обыкновенный уж">
+                  <p><strong>Описание:</strong> Неядовитая змея с серым или коричневым телом и жёлтыми пятнами на голове.</p>
+                  <p><strong>Место обитания:</strong> Возле пруда и водоёмов парка.</p>
+                  <p><strong>Интересный факт:</strong> Неядовит и охотится на мелкую рыбу, при опасности может притвориться мёртвым.</p>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Модальное окно для грибов -->
+      <div id="mushroomsModal" class="modal">
+          <div class="modal-content">
+              <span class="close-button" onclick="closeModal('mushroomsModal')">&times;</span>
+              <h3>Грибы парка</h3>
+              
+              <div class="modal-section">
+                  <h4 class="edible-title">СЪЕДОБНЫЕ ГРИБЫ</h4>
+                  
+                  <div class="modal-item">
+                      <h5>1. Дождевик настоящий</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/dojdevik.jpg" alt="Дождевик настоящий">
+                      <p><strong>Описание:</strong> Круглый гриб белого цвета, который при созревании становится коричневым.</p>
+                      <p><strong>Место обитания:</strong> На влажных газонах и лужайках парка.</p>
+                      <p><strong>Интересный факт:</strong> Образует большие семейные группы, при надавливании выпускает споры.</p>
+                  </div>
+                  
+                  <div class="modal-item">
+                      <h5>2. Опёнок летний</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/openok.jpg" alt="Опёнок летний">
+                      <p><strong>Описание:</strong> Небольшой гриб с коричневой шляпкой и тонкой ножкой.</p>
+                      <p><strong>Место обитания:</strong> На старых пнях и гнилой древесине.</p>
+                      <p><strong>Интересный факт:</strong> Растёт плотными пучками, один из самых популярных съедобных грибов.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>3. Навозник белый</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/navoznik.jpg" alt="Навозник белый">
+                      <p><strong>Описание:</strong> Белый гриб с вытянутой шляпкой и тонкой ножкой.</p>
+                      <p><strong>Место обитания:</strong> На перегнойной почве и богатых органическими веществами участках.</p>
+                      <p><strong>Интересный факт:</strong> Быстро растёт после дождей, съедобен только в молодом возрасте.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>4. Шампиньон двукольцевой</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/shampin.jpg" alt="Шампиньон двукольцевой">
+                      <p><strong>Описание:</strong> Гриб с белой шляпкой и характерным двойным кольцом на ножке.</p>
+                      <p><strong>Место обитания:</strong> На открытых лужайках и газонах парка.</p>
+                      <p><strong>Интересный факт:</strong> Предпочитает рыхлую землю, один из самых распространённых съедобных грибов.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>5. Сморчок конический</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/smorch.jpg" alt="Сморчок конический">
+                      <p><strong>Описание:</strong> Гриб с конической шляпкой, покрытой ячейками.</p>
+                      <p><strong>Место обитания:</strong> В тени деревьев и на влажных участках.</p>
+                      <p><strong>Интересный факт:</strong> Появляется весной, любит влажные участки, считается деликатесом.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>6. Лисичка ложная</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/lisichka.jpg" alt="Лисичка ложная">
+                      <p><strong>Описание:</strong> Оранжевый гриб с воронковидной шляпкой и тонкой ножкой.</p>
+                      <p><strong>Место обитания:</strong> Под кустами и в тени деревьев.</p>
+                      <p><strong>Интересный факт:</strong> Встречается небольшими группами, не червивеет благодаря содержанию хиноманнозы.</p>
+                  </div>
+              </div>
+              
+              <div class="modal-section">
+                  <h4 class="poisonous-title">НЕСЪЕДОБНЫЕ И ЯДОВИТЫЕ</h4>
+                  
+                  <div class="modal-item">
+                      <h5>7. Мухомор королевский</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/muhomor.jpg" alt="Мухомор королевский">
+                      <p><strong>Описание:</strong> Крупный гриб с коричневой шляпкой и белыми хлопьями.</p>
+                      <p><strong>Место обитания:</strong> В тени деревьев парка.</p>
+                      <p><strong>Интересный факт:</strong> Редкий яркий гриб, ядовит, содержит мускарин и иботеновую кислоту.</p>
+                  </div>
+                  
+                  <div class="modal-item">
+                      <h5>8. Бледная поганка</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/poganka.jpg" alt="Бледная поганка">
+                      <p><strong>Описание:</strong> Гриб с зеленоватой шляпкой, кольцом на ножке и вольвой у основания.</p>
+                      <p><strong>Место обитания:</strong> У корней лип и берёз.</p>
+                      <p><strong>Интересный факт:</strong> Крайне опасная, один из самых ядовитых грибов, смертельная доза очень мала.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>9. Галерина окаймлённая</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/galerina_okaimlennaya-1200x961.jpg" alt="Галерина окаймлённая">
+                      <p><strong>Описание:</strong> Небольшой коричневый гриб с тонкой ножкой и колокольчатой шляпкой.</p>
+                      <p><strong>Место обитания:</strong> На гнилой древесине и пнях.</p>
+                      <p><strong>Интересный факт:</strong> Ядовитая, содержит аматоксины, похожа на съедобные опята.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>10. Строфария сине-зелёная</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/strofaria.jpg" alt="Строфария сине-зелёная">
+                      <p><strong>Описание:</strong> Гриб с сине-зелёной шляпкой и покрывалом на ножке.</p>
+                      <p><strong>Место обитания:</strong> На богатой перегноем почве.</p>
+                      <p><strong>Интересный факт:</strong> Токсичная, может вызывать галлюцинации, содержит псилоцибин.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>11. Паутинник болотный</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/pautinik.jpg" alt="Паутинник болотный">
+                      <p><strong>Описание:</strong> Гриб с коричневой шляпкой и характерным паутинистым покрывалом.</p>
+                      <p><strong>Место обитания:</strong> Влажные затемнённые зоны парка.</p>
+                      <p><strong>Интересный факт:</strong> Несъедобный, некоторые виды паутинников ядовиты.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>12. Горчак (ложный белый)</h5>
+                      <img src="../../../../../images/content/attractions/park-rodina/gorchak.jpg" alt="Горчак">
+                      <p><strong>Описание:</strong> Гриб, внешне похожий на белый гриб, но с розоватой ножкой.</p>
+                      <p><strong>Место обитания:</strong> Возле старых деревьев и в хвойных участках.</p>
+                      <p><strong>Интересный факт:</strong> Горький гриб, несъедобен из-за неприятного вкуса, не ядовит.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  <section id="vinogradny-teras-map-section">
+    <div id="vinogradny-terasMap"></div>
+  </section>
+
+  <div class="routespage__header-outer">
+    <div class="routespage__header">
+      <h2 class="routespage__title">Приднестровье - это край, где плещется Днестр и молчат древние холмы</h2>
+    </div>
+  </div>
+  
+  <footer id="footer" class="footer">
+    <div class="footer__container">
+      
+      <!-- Колонка 1: Логотип + Копирайт -->
+      <div class="footer__column-logo">
+        <div class="footer__logo">EcoTravel</div>
+        <div class="footer__link">© Все права защищены, Войцеховская</div>
+        <div class="footer__link">Сайт создан в рамках курсовой работы как учебный проект.</div>
+      </div>
+
+      <!-- Колонка 2: Навигация -->
+      <div class="footer__column-nav">
+        <h3 class="footer__nav-title">НАВИГАЦИЯ</h3>
+        <nav class="footer__nav">
+          <a href="../../../index.html" class="footer__link">Главная</a>
+          <a href="../../../pages/routes-page/index.html" class="footer__link">Маршруты</a>
+          <a href="../../../pages/region-map/index.html" class="footer__link">Карта региона</a>
+          <a href="../../../pages/attraction-page/index.html" class="footer__link">Достопримечательности</a>
+          <a href="../../../pages/tips-page/index.html" class="footer__link">Советы путешественникам</a>
+          <a href="../../../index.html#about" class="footer__link">О нас</a>
+          <a href="../../../index.html#contact" class="footer__link">Контакты</a>
+        </nav>
+      </div>
+
+      <!-- Колонка 3: Контакты (адрес и режим работы) -->
+      <div class="footer__column-contacts">
+        <h3 class="footer__contacts-title">КОНТАКТЫ</h3>
+        <div class="footer__address-block">
+          <p class="footer__address-label">Наш адрес</p>
+          <p class="footer__address-text">Приднестровье, г. Тирасполь</p>
+        </div>
+        <div class="footer__hours-block">
+          <p class="footer__hours-label">Режим работы</p>
+          <p class="footer__hours-item">ПН-ВС: 09:00-18:00</p>
+        </div>
+      </div>
+
+      <!-- Колонка 4: Телефон + Почта + Соцсети -->
+      <div class="footer__column-right">
+        <div class="footer__phone-block">
+          <p class="footer__phone">77993307</p>
+          <a href="mailto:ecotravel_forever228@mail.ru" class="footer__email">ecotravel_forever228@mail.ru</a>
+        </div>
+        <div>
+          <p class="footer__socials-label">Мы в соц сетях</p>
+          <div class="footer__socials">
+            <a href="https://vk.com/feed"><img src="../../../images/common/icons/vk.png" alt="VK" class="footer__icon"></a>
+            <a href="https://www.instagram.com/"><img src="../../../images/common/icons/inst.png" alt="Instagram" class="footer__icon"></a>
+            <a href="https://www.facebook.com/?locale=ru_RU"><img src="../../../images/common/icons/facebook.png" alt="Facebook" class="footer__icon"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно избранного -->
+  <div id="modal-favorites" class="modal">
+    <div class="modal__content modal__content--favorites">
+      <span class="modal__close">&times;</span>
+      <h2 class="modal__title">Мои избранные</h2>
+      <div id="favorites-content" class="favorites-content">
+        <p class="favorites-empty">У вас пока нет избранных элементов</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно для просмотра больших изображений -->
+  <div id="modal-image-viewer" class="modal modal-image-viewer">
+    <div class="modal__content modal__content--image">
+      <span class="modal__close">&times;</span>
+      <img id="modal-image-viewer-img" src="" alt="" class="modal-image-viewer__img">
+    </div>
+  </div>
+
+  <script src="../../../scripts/utils/favorites.js"></script>
+  <script src="../../../scripts/utils/favorites-modal.js"></script>
+  <script src="../../../scripts/utils/image-viewer.js"></script>
+  <script src="park.js"></script>
+  <script>
+  function toggleMenu() {
+      document.querySelector('.burger-menu').classList.toggle('active');
+      document.querySelector('.nav__list').classList.toggle('active');
+  }
+  document.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+          document.querySelector('.burger-menu').classList.remove('active');
+          document.querySelector('.nav__list').classList.remove('active');
+      });
+  });
+  </script>
+      </body>
+</html>
+
+
+
+

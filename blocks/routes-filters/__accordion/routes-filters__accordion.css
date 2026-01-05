@@ -1,0 +1,24 @@
+/* Element: routes-filters__accordion */
+.filter-accordion {
+    margin-bottom: 20px;
+}
+
+.filter-accordion__title {
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #2D5016;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-accordion__title:hover {
+    color: #1d3a0f;
+}
+
+.filter-accordion__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}

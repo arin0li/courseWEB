@@ -1,0 +1,9 @@
+/* Block: image-viewer — Nested BEM */
+/* Import element styles first */
+@import url('./__image/image-viewer__image.css');
+@import url('./__controls/image-viewer__controls.css');
+
+.image-viewer {
+  position: relative;
+}
+

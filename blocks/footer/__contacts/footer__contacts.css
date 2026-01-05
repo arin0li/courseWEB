@@ -1,0 +1,43 @@
+/* Footer contacts element */
+.footer__column-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__contacts-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.footer__address-block,
+.footer__hours-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__address-label,
+.footer__hours-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #000;
+  margin: 0;
+}
+
+.footer__address-text,
+.footer__hours-text,
+.footer__hours-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000;
+  line-height: 1.5;
+  margin: 0;
+}
+

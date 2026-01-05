@@ -1,0 +1,8 @@
+/* Block: favorites - imports element files (Nested BEM) */
+@import url('./__button/favorites__button.css');
+@import url('./__list/favorites__list.css');
+@import url('./__item/favorites__item.css');
+
+.favorites { /* block-level defaults can go here */ }
+
+

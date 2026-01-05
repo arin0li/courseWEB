@@ -1,0 +1,17 @@
+/* Block: card
+   Common card block base styles (kept minimal to preserve appearance).
+*/
+.card {
+  box-sizing: border-box;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card__title {
+  font-weight: 700;
+}
+

@@ -1,0 +1,16 @@
+/* Routes card info item element */
+.routes-card__info-item {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #EAF7FF;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.routes-card__info-item i {
+  font-size: 12px;
+  opacity: 0.9;
+}
+

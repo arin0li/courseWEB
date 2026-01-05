@@ -1,0 +1,8 @@
+/* Card image element */
+.card__image {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+

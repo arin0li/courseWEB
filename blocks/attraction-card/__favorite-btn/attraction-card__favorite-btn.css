@@ -1,0 +1,49 @@
+/* Attraction card favorite button element */
+.attraction-card__favorite-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.attraction-card__favorite-btn:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.2) 100%);
+  transform: scale(1.15) translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  border-color: white;
+}
+
+.attraction-card__favorite-btn.active {
+  background: linear-gradient(135deg, #ff4757 0%, #ff6675 100%);
+  border-color: #ff3333;
+  box-shadow: 0 8px 25px rgba(255, 71, 87, 0.4);
+}
+
+.attraction-card__favorite-btn.active:hover {
+  background: linear-gradient(135deg, #ff6675 0%, #ff8893 100%);
+  transform: scale(1.18) translateY(-3px);
+  box-shadow: 0 14px 35px rgba(255, 71, 87, 0.5);
+}
+
+.attraction-card__favorite-btn.active i {
+  color: #fff;
+}
+
+.attraction-card__favorite-btn i {
+  font-size: 20px;
+  transition: all 0.3s ease;
+  color: white;
+}
+

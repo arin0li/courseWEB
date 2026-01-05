@@ -1,0 +1,8 @@
+/* Block: quick-view — Nested BEM */
+/* Import element styles first */
+@import url('./__button/quick-view__button.css');
+
+.quick-view-modal {
+  /* placeholder for quick-view modal styles if separated later */
+}
+

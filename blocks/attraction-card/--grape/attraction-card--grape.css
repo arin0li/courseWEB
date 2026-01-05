@@ -1,0 +1,9 @@
+/* Attraction card modifier: grape */
+.attraction-card--grape {
+  background-image: url('../../../images/content/attractions/vinogradny_teras/vinogradniy1.jpg');
+}
+
+.attraction-card--grape .attraction-card__name {
+  padding-top: 20px;
+}
+
