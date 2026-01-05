@@ -13,3 +13,11 @@
   flex: 1 1 auto;
 }
 
+@media (max-width: 768px) {
+  .attraction-card__desc {
+    max-height: none;
+    overflow: visible;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
