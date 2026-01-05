@@ -1,0 +1,23 @@
+/* Footer logo element */
+.footer__column-logo,
+.footer__logo,
+.footer__copyright {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__logo {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  font-size: 24px;
+  color: #000;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  color: #666;
+}
+

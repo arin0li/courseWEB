@@ -1,0 +1,17 @@
+/* favorites list element */
+.favorites__list,
+.favorites-content {
+  padding: 20px 40px 40px 60px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.favorites__empty,
+.favorites-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+}
+

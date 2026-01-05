@@ -1,0 +1,20 @@
+/* Element: attractions-filters__button */
+.attractions-filters__button,
+.toolbar__show-btn {
+    padding: 10px 25px;
+    background: #2D5016;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.attractions-filters__button:hover,
+.toolbar__show-btn:hover {
+    background: #1d3a0f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
+}

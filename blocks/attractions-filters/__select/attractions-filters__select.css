@@ -1,0 +1,17 @@
+/* Element: attractions-filters__select */
+.attractions-filters__select,
+.sort__select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.attractions-filters__select:hover,
+.sort__select:hover {
+    border-color: #2D5016;
+    box-shadow: 0 2px 8px rgba(45, 80, 22, 0.2);
+}

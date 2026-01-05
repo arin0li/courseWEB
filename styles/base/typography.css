@@ -1,0 +1,22 @@
+/* Basic typography defaults for the project */
+@font-face {
+  font-family: 'MrKindlyJasmine';
+  src: url('../../assets/fonts/mr_kindlyjasmineg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html { font-family: Open-Sans, "Rubik", Arial, sans-serif; }
+body { font-family: "Rubik", Arial, sans-serif; color: #111; background: #fff; }
+
+h1,h2,h3,h4,h5,h6 { font-family: "Merriweather", serif; }
+
+/* Utility for visually hidden content */
+.sr-only {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+

@@ -1,0 +1,75 @@
+/* Block: routes-filters — Nested BEM */
+/* Import element styles first */
+@import url('./__panel/routes-filters__panel.css');
+@import url('./__accordion/routes-filters__accordion.css');
+@import url('./__checkbox/routes-filters__checkbox.css');
+
+.filters__show-btn,
+.filters-panel__button {
+    background: #2D5016;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 12px;
+}
+
+.filters__show-btn:hover,
+.filters-panel__button:hover {
+    background: #1d3a0f;
+    transform: translateY(-2px);
+}
+
+.filters-panel__reset {
+    background: #999;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filters-panel__reset:hover {
+    background: #666;
+    transform: translateY(-2px);
+}
+
+.attractions-filters__select,
+.sort__select {
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.attractions-filters__select:hover,
+.sort__select:hover {
+    border-color: #2D5016;
+    box-shadow: 0 2px 8px rgba(45, 80, 22, 0.2);
+}
+
+@media (max-width: 768px) {
+    .routes-filters,
+    .filters-panel {
+        padding: 15px;
+    }
+
+    .filters__show-btn,
+    .filters-panel__button,
+    .filters-panel__reset {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+

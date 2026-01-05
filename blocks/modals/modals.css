@@ -1,0 +1,19 @@
+/* Block: modals — Nested BEM */
+/* Import element styles first */
+@import url('./__content/modals__content.css');
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.65);
+  align-items: flex-start;
+  justify-content: center;
+}
+

@@ -1,0 +1,32 @@
+/* Block: routes-pagination — Nested BEM */
+/* Import element styles first */
+@import url('./__arrow/routes-pagination__arrow.css');
+@import url('./__number/routes-pagination__number.css');
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .pagination {
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .pagination__number {
+        min-width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .pagination__arrow {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}
+

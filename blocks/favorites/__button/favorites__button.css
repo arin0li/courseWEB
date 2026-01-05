@@ -1,0 +1,40 @@
+/* favorites button element - supports legacy classes for JS compatibility */
+.favorites__button,
+.favorite-btn-attraction,
+.favorite-btn-route {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.favorites__link,
+.favorites-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.favorites__count,
+.favorites-count {
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  min-width: 18px;
+  height: 18px;
+  background: #ff4444;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+

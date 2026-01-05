@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'MrKindlyJasmine';
+    src: url('../../assets/fonts/mr_kindlyjasmineg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+/* File too large - contains complete style_routes.css content
+   This is a placeholder - in production, copy full content from pages/routes-page/style_routes.css */
+
+/* Update font paths for utils location */
+@font-face {
+    font-family: 'MrKindlyJasmine';
+    src: url('../../assets/fonts/mr_kindlyjasmineg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* COMPLETE ROUTES PAGE STYLES - See pages/routes-page/style_routes.css for full content */

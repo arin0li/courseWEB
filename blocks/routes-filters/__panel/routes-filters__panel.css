@@ -1,0 +1,16 @@
+/* Element: routes-filters__panel */
+.routes-filters,
+.filters-panel {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.routes-filters__heading,
+.filters-panel__heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
