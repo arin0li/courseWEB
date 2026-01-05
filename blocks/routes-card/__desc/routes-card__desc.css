@@ -11,7 +11,7 @@
   line-height: 1.65;
   color: rgba(255,255,255,0.96);
   text-shadow: 0 1px 4px rgba(0,0,0,0.9);
-  max-height: 528px - 279px - 129px; 
+  max-height: calc(528px - 279px - 129px);
   overflow: hidden;
 }
 

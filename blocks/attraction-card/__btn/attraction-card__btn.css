@@ -1,10 +1,8 @@
 /* Attraction card button element */
 .attraction-card__btn {
-  position: absolute;
-  left: 41px;
-  bottom: 30px;       
+  position: static;
   z-index: 20;
-  
+  align-self: flex-start;
   padding: 10px 26px;
   background: linear-gradient(180deg, #4B99B2, #6ADB90);
   color: white;
