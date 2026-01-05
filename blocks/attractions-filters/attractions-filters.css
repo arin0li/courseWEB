@@ -1,0 +1,33 @@
+/* Block: attractions-filters — Nested BEM */
+/* Import element styles first */
+@import url('./__select/attractions-filters__select.css');
+@import url('./__button/attractions-filters__button.css');
+
+.attractions-filters {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .attractions-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .attractions-filters__select,
+    .sort__select {
+        width: 100%;
+    }
+
+    .attractions-filters__button,
+    .toolbar__show-btn {
+        width: 100%;
+    }
+}
+

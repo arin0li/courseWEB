@@ -1,0 +1,21 @@
+/* Element: routes-pagination__arrow */
+.pagination__arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+    color: #2D5016;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.pagination__arrow:hover:not(:disabled) {
+    transform: translateY(-2px);
+    color: #1d3a0f;
+}
+
+.pagination__arrow--prev,
+.pagination__arrow--next {
+    opacity: 1;
+}

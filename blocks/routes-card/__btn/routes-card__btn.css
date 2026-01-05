@@ -1,0 +1,32 @@
+/* Routes card button element */
+.routes-card__btn {
+  position: absolute;
+  left: 41px;
+  bottom: 30px;       
+  z-index: 20;
+  
+  padding: 10px 26px;
+  background: linear-gradient(180deg, #4B99B2, #6ADB90);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 32px;
+}
+
+@media (max-width: 768px) {
+  .routes-card__btn {
+    position: static !important;
+    left: auto !important;
+    bottom: auto !important;
+    padding: 8px 18px;
+    font-size: 11px;
+    align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: 40px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}

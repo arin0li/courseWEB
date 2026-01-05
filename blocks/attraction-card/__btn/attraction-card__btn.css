@@ -1,0 +1,27 @@
+/* Attraction card button element */
+.attraction-card__btn {
+  position: static;
+  z-index: 20;
+  align-self: flex-start;
+  padding: 10px 26px;
+  background: linear-gradient(180deg, #4B99B2, #6ADB90);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 32px;
+}
+
+@media (max-width: 768px) {
+  .attraction-card__btn {
+    margin-top: auto;
+    margin-bottom: 40px;
+    padding: 8px 18px;
+    font-size: 11px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+

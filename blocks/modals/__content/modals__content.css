@@ -1,0 +1,9 @@
+/* Element: modal__content */
+.modal__content {
+  box-sizing: border-box;
+}
+
+.modal__image {
+  background-size: cover;
+  background-position: center;
+}

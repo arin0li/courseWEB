@@ -1,0 +1,704 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+    <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="turunchuk-page.css">
+            <link rel="stylesheet" href="../../../styles/utils/helpers.css">
+            <link rel="stylesheet" href="../../../styles/utils/style.css?v=5">
+            <link rel="icon" type="image/png" href="../../../images/common/icons/icon-site.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>   
+      </head>
+
+      <body>
+        <header class="header">
+            <div class="header__container">
+                <div class="logo">
+                  <h1 class="logo__title">EcoTravel<br>Приднестровье</h1>
+                </div>
+           
+                <nav class="nav">
+                  <div class="burger-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <ul class="nav__list">
+                    <li class="nav__item"><a href="../../../index.html#hero" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="../../../pages/routes-page/index.html" class="nav__link">Маршруты</a></li>
+                    <li class="nav__item"><a href="../../../pages/region-map/index.html" class="nav__link">Карта региона</a></li>
+                    <li class="nav__item"><a href="../../../pages/attraction-page/index.html" class="nav__link">Достопримечательности</a></li>
+                    <li class="nav__item"><a href="../../../pages/tips-page/index.html" class="nav__link">Советы путешественникам</a></li>
+                    <li class="nav__item"><a href="../../../index.html#about" class="nav__link">О нас</a></li>
+                    <li class="nav__item"><a href="../../../index.html#contact" class="nav__link">Контакты</a></li>
+                    <li class="nav__item">
+                      <a href="#" class="nav__link favorites-link" id="favoritesLink">
+                        <i class="fas fa-heart"></i>
+                        <span class="favorites-count" style="display: none;">0</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </header>
+        <!-- БЛОК-ГЕРОЙ НА СТРАНИЦЕ МАРШРУТОВ -->
+        <section id="turunchuk-hero" class="turunchuk-hero">
+            <!-- Фоновое изображение -->
+            <div class="turunchuk-hero__bg"></div>
+          
+            <!-- Тёмный оверлей — точно как в карточках -->
+            <div class="turunchuk-hero__overlay"></div>
+          
+            <!-- Заголовок -->
+            <h1 class="turunchuk-hero__title">
+              ТУРУНЧУК
+            </h1>
+          </section>
+
+
+          <div class="container">
+
+            <div class="content-wrapper">
+        
+                <!-- Левый блок -->
+                <div class="left-block">
+        
+                    <div class="card">
+                        <h2>Описание</h2>
+                        <p>Река Турунчук — одно из самых живописных мест Приднестровья, природный рукав Днестра, извивающийся среди густых зарослей и зелёных лугов. Это уголок спокойствия, где можно насладиться звуками природы, прохладой воды и чистым воздухом.<br><br></p>
+        
+                        <p>Берега Турунчука покрыты ивами, камышом и цветущими травами, а в воде отражаются облака и солнечные лучи. Здесь любят отдыхать местные жители, устраивая пикники, рыбалку и короткие прогулки на лодках.</p>
+        
+                        <p>Это место идеально подходит для любителей природы, фотографов и всех, кто ищет умиротворение вдали от городской суеты.</p>
+        
+                        <h2>Интересные факты:</h2>
+                        <ul>
+                            <li>Турунчук считается одной из самых чистых водных артерий региона.</li>
+                            <li>В прибрежных зонах можно встретить редких птиц — серых цапель, диких уток, лебедей.</li>
+                            <li>Название реки происходит от тюркского слова, означающего «ветвь» или «рукав».</li>
+                            <li>В старину здесь проходили торговые пути и стояли рыбацкие поселения.</li>
+                        </ul>
+        
+                        <h2>Турунчук:</h2>
+                        <p><strong>Регион:</strong> Слободзейский район</p>
+                        <p><strong>Расположение:</strong> между селами Чобручи и Красное</p>
+                        <p><strong>Точные координаты:</strong> 46.665402795019524, 29.765156120226266</p>
+                        <p><strong>Сезон посещения:</strong> весна – осень</p>
+                        <p><strong>Доступность:</strong> автомобиль, пеший маршрут, водные прогулки</p>
+                        <p><strong>Продолжительность прогулки:</strong> 1–2 часа</p>
+                        <p><strong>Сложность:</strong> лёгкая</p>
+                    </div>
+        
+                </div>
+        
+                <!-- Правая колонка -->
+                <div class="right-column">
+        
+                    <!-- Галерея -->
+                    <div class="gallery-container">
+                        <div class="gallery">
+                            <div class="gallery-track" id="galleryTrack">
+                                <div class="gallery-image"><img src="../../../images/content/attractions/turunchuk/turunchuk-hero.jpg" alt=""></div>
+                                <div class="gallery-image"><img src="../../../images/content/attractions/turunchuk/dnestr1.jpg"></div>
+                                <div class="gallery-image"><img src="../../../images/content/attractions/turunchuk/YoAAAgBl6uA-960.jpg"></div>
+                                <div class="gallery-image"><img src="../../../images/content/attractions/turunchuk/turunchuk-river.jpg"></div> 
+                                <div class="gallery-image"><img src="../../../images/content/attractions/turunchuk/kgAAAgNl6uA-960.jpg"></div>    
+                            </div>                            
+                        </div>
+                        <button class="nav-btn prev" onclick="moveSlide(-1)"><img src="../../../images/common/navigation/back.png" alt="back"></button>
+                            <button class="nav-btn next" onclick="moveSlide(1)"><img src="../../../images/common/navigation/next.png" alt="next"></button>
+                    </div>
+        
+                    <!-- Блок под галереей -->
+                    <div class="card tips-block">
+                        <h2>Советы<br>путешественникам:</h2>
+        
+                        <p><strong>Лучшее время для посещения:</strong> Весна и осень — в это время вода особенно чиста, а пейзажи насыщены цветом. Лучше всего выбирать утренние и вечерние часы, когда воздух особенно свеж.</p>
+        
+                        <p><strong><br>Возьмите с собой:</strong> воду (1–2 литра на человека), головной убор, репеллент от комаров и клещей, удобную обувь с нескользящей подошвой (грунт может быть влажным), бинокль для наблюдения за птицами (лебеди, цапли, утки), лёгкий перекус (орехи, фрукты).</p>
+        
+                        <p><strong><br>Избегайте купания в заводях из-за топкой почвы и возможного течения. Не кормите диких птиц. Мусор забирайте с собой.</strong></p>
+                    </div>
+        
+                </div>
+            </div>
+        
+            <!-- Нижний горизонтальный блок -->
+            <div class="bottom-block">
+        
+                <div class="card">
+        
+                    <h2 class="bottom-title">Как добраться:</h2>
+        
+                    <p>
+                        До реки Турунчук удобнее всего добираться через село Чобручи (Слободзейский район).
+                        Въехав в Чобручи, следуйте по центральной улице к югу, в сторону луга и старого моста
+                        через Турунчук. Здесь начинается место соединения реки Турунчук с Днестром.
+                        Доехать можно на автомобиле, велосипеде или маршрутке.
+                        Ознакомиться с расписанием и подробным маршрутом можно
+                        <a href="https://wikiroutes.info/dnestrovsk?routes=108003" target="_blank">здесь</a>.
+                    </p>
+        
+                    <p><strong>Маршрутка:</strong> Тирасполь — Чобручи, выход на остановке "Комсомольская улица"
+                        (стр. Комсомолистэ), далее 26 минут пешком до места слияния рек.</p>
+        
+                    <p><strong>Парковка:</strong> у старого моста, бесплатно, места ограничены.</p>
+                    <button class="nature-button" onclick="location.href='#nature-handbook'">Ознакомиться с природой</button>
+                </div>
+        
+        
+            </div>
+        
+        </div>
+
+
+        <!-- СПРАВОЧНИК ПРИРОДЫ -->
+        <section class="nature-handbook" id="nature-handbook">
+          <div class="handbook-header">
+              <h2 class="handbook-title">Справочник природы</h2>
+          </div>
+      
+          <div class="handbook-content">
+      
+              <!-- РАСТЕНИЯ -->
+              <div class="category">
+                  <div class="category-header">
+                      <h3 class="category-title">РАСТЕНИЯ</h3>
+                      <!-- Кнопка подробнее для всего ряда растений -->
+                      <span class="category-details" onclick="openModal('plants')">
+                        Подробнее
+                    </span>
+                  </div>
+                  <div class="cards-grid">
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/snowdrop.png" alt="Подснежник">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Подснежник обыкновенный</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/cane.avif" alt="Камыш озерный">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Камыш озёрный</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/iva.jpg" alt="Ива белая">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Ива белая</div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- ЖИВОТНЫЕ -->
+              <div class="category">
+                  <div class="category-header">
+                      <h3 class="category-title animal-title">ЖИВОТНЫЕ</h3>
+                      <!-- Кнопка подробнее для всего ряда животных -->
+                      <span class="category-details" onclick="openModal('animals')">
+                        Подробнее
+                    </span>
+                  </div>
+                  <div class="cards-grid">
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/hedgehog.png" alt="Ёж">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Ёж обыкновенный</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/grayHeron.jpg" alt="Цапля">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Се́рая ца́пля</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/duck.jpg" alt="Утка кряква">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Утка кряква</div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- ГРИБЫ -->
+              <div class="category mushrooms">
+                  <div class="mushrooms-header">
+                      <h3 class="mushrooms-main-title">ГРИБЫ</h3>
+                      <div class="mushrooms-subtitles">
+                          <span class="poisonous">ЯДОВИТЫЕ</span>
+                          <span class="edible">СЪЕДОБНЫЕ</span>
+                      </div>
+                      <!-- Кнопка подробнее для грибов -->
+                      <span class="category-details" onclick="openModal('mushrooms')">
+                        Подробнее
+                    </span>
+                  </div>
+                  <!-- Сетка грибов с кастомными gap -->
+                  <div class="mushrooms-grid">
+                      <!-- Ядовитые -->
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/amanita muscaria.png" alt="Мухомор">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Мухомор красный</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/pale grebe.jpg" alt="Бледная поганка">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Бледная поганка</div>
+                      </div>
+      
+                      <!-- Съедобные -->
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/opyata.jpg" alt="Опёнок осенний">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Опёнок осенний</div>
+                      </div>
+                      <div class="nature-card">
+                          <img src="../../../images/content/attractions/turunchuk/beliy.jpg" alt="Белый гриб">
+                          <div class="card-overlay"></div>
+                          <div class="card-text">Белый гриб</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+      
+      <!-- Модальные окна -->
+      <!-- Модальное окно для растений -->
+      <div id="plantsModal" class="modal">
+          <div class="modal-content">
+              <span class="close-button" onclick="closeModal('plantsModal')">&times;</span>
+              <h3>Растения Турунчука</h3>
+              
+              <div class="modal-item">
+                  <h4>1. Подснежник обыкновенный</h4>
+                  <img src="../../../images/content/attractions/turunchuk/snowdrop.png" alt="Подснежник">
+                  <p><strong>Описание:</strong> Многолетнее луковичное растение, одно из первых весенних растений. Цветет в феврале-апреле.</p>
+                  <p><strong>Место обитания:</strong> Лиственные леса, опушки, берега рек. Встречается во влажных местах вдоль Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Занесен в Красную книгу многих стран, символ надежды и весны.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>2. Камыш озёрный</h4>
+                  <img src="../../../images/content/attractions/turunchuk/cane.avif" alt="Камыш">
+                  <p><strong>Описание:</strong> Густые стены вдоль воды, высота до 3 м. Многолетнее травянистое растение с цилиндрическими стеблями.</p>
+                  <p><strong>Место обитания:</strong> Растет по берегам водоемов, образует густые заросли. Важная часть экосистемы Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Используется для очистки воды, так как поглощает вредные вещества.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>3. Ива белая плакучая</h4>
+                  <img src="../../../images/content/attractions/turunchuk/iva.jpg" alt="Ива">
+                  <p><strong>Описание:</strong> Характерные «плакучие» деревья над водой. Дерево высотой 15-25 метров с раскидистой кроной и серебристыми листьями.</p>
+                  <p><strong>Место обитания:</strong> Преимущественно по берегам рек, образует ивняки вдоль Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Кора содержит салицин - природное болеутоляющее средство.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>4. Рогоз узколистный</h4>
+                  <img src="../../../images/content/attractions/turunchuk/rogoz-dekorativniy.jpg" alt="Рогоз">
+                  <p><strong>Описание:</strong> Многолетнее растение с характерными коричневыми «сосисками» на стеблях. Высота до 2-3 метров.</p>
+                  <p><strong>Место обитания:</strong> Берега водоемов, мелководье. Образует густые заросли вдоль Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Любимое место обитания ондатры. Используется для плетения корзин.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>5. Тростник обыкновенный</h4>
+                  <img src="../../../images/content/attractions/turunchuk/trostnik.webp" alt="Тростник">
+                  <p><strong>Описание:</strong> Высокое многолетнее растение до 4 метров, главный строитель плавней. Стебли полые, листья длинные и узкие.</p>
+                  <p><strong>Место обитания:</strong> Образует обширные заросли по берегам рек и в плавнях Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Создает идеальные условия для гнездования водоплавающих птиц.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>6. Кувшинка белая</h4>
+                  <img src="../../../images/content/attractions/turunchuk/kuvshinka.jpg" alt="Кувшинка">
+                  <p><strong>Описание:</strong> Водное растение с крупными белыми цветками и плавающими листьями. Цветет с июня по август.</p>
+                  <p><strong>Место обитания:</strong> Старицы и тихие заводи Турунчука с чистой водой.</p>
+                  <p><strong>Интересный факт:</strong> Цветки раскрываются утром и закрываются вечером, следуя за солнцем.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>7. Кубышка жёлтая</h4>
+                  <img src="../../../images/content/attractions/turunchuk/kubishka.jpg" alt="Кубышка">
+                  <p><strong>Описание:</strong> Водное растение с желтыми шаровидными цветками и крупными подводными листьями.</p>
+                  <p><strong>Место обитания:</strong> Старицы и заводи Турунчука, предпочитает более глубокие места чем кувшинка.</p>
+                  <p><strong>Интересный факт:</strong> Корневища содержат алкалоиды и используются в народной медицине.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>8. Ива пепельная</h4>
+                  <img src="../../../images/content/attractions/turunchuk/iva.webp" alt="Ива пепельная">
+                  <p><strong>Описание:</strong> Низкий кустарник высотой 2-6 метров с сероватыми листьями. Растет плотными зарослями.</p>
+                  <p><strong>Место обитания:</strong> Влажные берега, пойменные луга вдоль Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Важное растение для укрепления берегов и создания укрытий для животных.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>9. Частуха подорожниковая</h4>
+                  <img src="../../../images/content/attractions/turunchuk/chastuha.jpg" alt="Частуха">
+                  <p><strong>Описание:</strong> Листья как подорожник, цветёт розовым летом. Прибрежное растение высотой до 1 метра.</p>
+                  <p><strong>Место обитания:</strong> Мелководье и сырые берега Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Цветет с июня по август, привлекая насекомых-опылителей.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>10. Стрелолист обыкновенный</h4>
+                  <img src="../../../images/content/attractions/turunchuk/strelolist.jpg" alt="Стрелолист">
+                  <p><strong>Описание:</strong> Листья в форме стрелы, растёт на мелководье. Белые цветки с тремя лепестками.</p>
+                  <p><strong>Место обитания:</strong> Мелководье и прибрежная зона Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Подводные листья имеют другую форму - лентовидные, а надводные - стреловидные.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>11. Сусак зонтичный</h4>
+                  <img src="../../../images/content/attractions/turunchuk/susak.webp" alt="Сусак">
+                  <p><strong>Описание:</strong> Розовые «зонтики» в июле-августе, очень красиво. Высота до 1,5 метров.</p>
+                  <p><strong>Место обитания:</strong> Мелководье и берега стариц Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Один из самых красивых водных растений региона. Цветки собраны в зонтиковидное соцветие.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>12. Водяной орех (чили́м, рогульник)</h4>
+                  <img src="../../../images/content/attractions/turunchuk/orehVodyan.jpg" alt="Водяной орех">
+                  <p><strong>Описание:</strong> Редкое реликтовое растение с рогатыми плодами-орехами. Плавающие розетки листьев.</p>
+                  <p><strong>Место обитания:</strong> Тихие заводи и старицы Турунчука (встречается редко).</p>
+                  <p><strong>Интересный факт:</strong> Занесен в Красную книгу ПМР. Древнее растение, пережившее ледниковый период.</p>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Модальное окно для животных -->
+      <div id="animalsModal" class="modal">
+          <div class="modal-content">
+              <span class="close-button" onclick="closeModal('animalsModal')">&times;</span>
+              <h3>Животные Турунчука</h3>
+              
+              <div class="modal-item">
+                  <h4>1. Ёж обыкновенный</h4>
+                  <img src="../../../images/content/attractions/turunchuk/hedgehog.png" alt="Ёж">
+                  <p><strong>Описание:</strong> Небольшое насекомоядное млекопитающее с характерными иголками на спине.</p>
+                  <p><strong>Место обитания:</strong> Леса, опушки, парки, часто встречается в прибрежной зоне Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> За ночь может пробежать до 3 км в поисках пищи.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>2. Серая цапля</h4>
+                  <img src="../../../images/content/attractions/turunchuk/grayHeron.jpg" alt="Цапля">
+                  <p><strong>Описание:</strong> Крупная птица с длинными ногами и шеей, серым оперением и желтым клювом.</p>
+                  <p><strong>Место обитания:</strong> Берега водоемов, мелководье. Часто стоит неподвижно в воде Турунчука.</p>
+                  <p><strong>Интересный факт:</strong> Может часами стоять на одной ноге, поджидая добычу.</p>
+              </div>
+              
+              <div class="modal-item">
+                  <h4>3. Утка кряква</h4>
+                  <img src="../../../images/content/attractions/turunchuk/duck.jpg" alt="Утка">
+                  <p><strong>Описание:</strong> Крупная речная утка. Селезень имеет ярко-зеленую голову, самка коричневая с пятнами.</p>
+                  <p><strong>Место обитания:</strong> Водоемы с растительностью. Многочисленный вид на Турунчуке.</p>
+                  <p><strong>Интересный факт:</strong> Предок большинства пород домашних уток.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>4. Ондатра</h4>
+                  <img src="../../../images/content/attractions/turunchuk/ondatra-1200x825.jpg" alt="Ондатра">
+                  <p><strong>Описание:</strong> Крупный грызун с темно-коричневым мехом и длинным хвостом. Длина тела до 35 см.</p>
+                  <p><strong>Место обитания:</strong> Берега водоемов, особенно в зарослях рогоза и тростника. Почти гарантированно увидите вечером.</p>
+                  <p><strong>Интересный факт:</strong> Строит хатки из растений и роет норы в берегах. Активна в сумерках.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>5. Речной бобр</h4>
+                  <img src="../../../images/content/attractions/turunchuk/bobr.jpg" alt="Бобр">
+                  <p><strong>Описание:</strong> Крупный грызун с плоским хвостом. Хатки и погрызы ив видны повсеместно вдоль Турунчука.</p>
+                  <p><strong>Место обитания:</strong> Берега рек с ивняком. Строит плотины и хатки из веток и глины.</p>
+                  <p><strong>Интересный факт:</strong> Бобры - инженеры экосистемы, их деятельность создает новые места обитания для других видов.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>6. Выдра речная</h4>
+                  <img src="../../../images/content/attractions/turunchuk/vidra.jpg" alt="Выдра">
+                  <p><strong>Описание:</strong> Хищное млекопитающее с вытянутым телом и перепончатыми лапами. Отличный пловец.</p>
+                  <p><strong>Место обитания:</strong> Берега рек и стариц. Следы и помёт на берегу (сами редко показываются).</p>
+                  <p><strong>Интересный факт:</strong> Очень скрытное животное, активна в основном ночью. Питается рыбой и раками.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>7. Большая белая цапля</h4>
+                  <img src="../../../images/content/attractions/turunchuk/Ardea-alba-768x432.jpg" alt="Белая цапля">
+                  <p><strong>Описание:</strong> Крупная белая птица с длинными ногами и шеей. Размах крыльев до 1,5 метров.</p>
+                  <p><strong>Место обитания:</strong> Берега водоемов, мелководье. Стоит в камышах вместе с серой цаплей.</p>
+                  <p><strong>Интересный факт:</strong> В брачный период у птиц появляются длинные декоративные перья на спине.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>8. Кваква (ночная цапля)</h4>
+                  <img src="../../../images/content/attractions/turunchuk/kvakva.jpg" alt="Кваква">
+                  <p><strong>Описание:</strong> Среднего размера цапля с короткой шеей. Активна в сумерках и ночью.</p>
+                  <p><strong>Место обитания:</strong> Заросли камыша и ивняка вдоль Турунчука. Кричит по ночам характерным звуком.</p>
+                  <p><strong>Интересный факт:</strong> Единственная цапля, которая активна ночью. Гнездится колониями на деревьях.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>9. Лысуха</h4>
+                  <img src="../../../images/content/attractions/turunchuk/lisuha.jpg" alt="Лысуха">
+                  <p><strong>Описание:</strong> Водоплавающая птица с черным оперением и белой бляшкой на лбу. Плавает среди кувшинок.</p>
+                  <p><strong>Место обитания:</strong> Заросшие водоемы со стоячей водой. Многочисленна на Турунчуке.</p>
+                  <p><strong>Интересный факт:</strong> Отличный ныряльщик, может находиться под водой до 15 секунд.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>10. Обыкновенная черепаха болотная</h4>
+                  <img src="../../../images/content/attractions/turunchuk/cherepaha.jpg" alt="Черепаха">
+                  <p><strong>Описание:</strong> Пресноводная черепаха с темным панцирем и желтыми пятнами. Длина панциря до 20 см.</p>
+                  <p><strong>Место обитания:</strong> Старицы и заводи Турунчука. Греется на брёвнах и камнях у берега.</p>
+                  <p><strong>Интересный факт:</strong> Может находиться под водой до часа. Зимует на дне водоемов.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>11. Уж обыкновенный и водяной уж</h4>
+                  <img src="../../../images/content/attractions/turunchuk/uz.jpg" alt="Уж">
+                  <p><strong>Описание:</strong> Неядовитые змеи. Обыкновенный уж с желтыми пятнами за головой, водяной - с шахматным рисунком.</p>
+                  <p><strong>Место обитания:</strong> Берега и заросли вдоль Турунчука. Часто переплывают рукав.</p>
+                  <p><strong>Интересный факт:</strong> При опасности могут притвориться мертвыми или выделять неприятный запах.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>12. Лягушки озёрная и прудовая</h4>
+                  <img src="../../../images/content/attractions/turunchuk/lagushka.jpg" alt="Лягушка">
+                  <p><strong>Описание:</strong> Крупные зеленые лягушки. Озёрная - самая крупная, прудовая - немного мельче.</p>
+                  <p><strong>Место обитания:</strong> Водоемы и берега Турунчука. Концерт с мая по август.</p>
+                  <p><strong>Интересный факт:</strong> Самцы издают громкие звуки в брачный период, создавая настоящий концерт.</p>
+              </div>
+
+              <div class="modal-item">
+                  <h4>13. Орлан-белохвост</h4>
+                  <img src="../../../images/content/attractions/turunchuk/orlan.jpg" alt="Орлан">
+                  <p><strong>Описание:</strong> Крупная хищная птица с белым хвостом. Размах крыльев до 2,5 метров.</p>
+                  <p><strong>Место обитания:</strong> Иногда пролетает над рукавом (редко, но бывает). Гнездится на высоких деревьях.</p>
+                  <p><strong>Интересный факт:</strong> Один из самых крупных хищных птиц региона. Питается рыбой и водоплавающими.</p>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Модальное окно для грибов -->
+      <div id="mushroomsModal" class="modal">
+          <div class="modal-content">
+              <span class="close-button" onclick="closeModal('mushroomsModal')">&times;</span>
+              <h3>Грибы окрестностей Турунчука</h3>
+              
+              <div class="modal-section">
+                  <h4 class="poisonous-title">ЯДОВИТЫЕ ГРИБЫ</h4>
+                  
+                  <div class="modal-item">
+                      <h5>1. Мухомор красный (Amanita muscaria)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/amanita muscaria.png" alt="Мухомор">
+                      <p><strong>Описание:</strong> Ярко-красная шляпка с белыми хлопьями, ножка белая с кольцом.</p>
+                      <p><strong>Место обитания:</strong> Хвойные и смешанные леса, часто под березами и елями.</p>
+                      <p><strong>Опасность:</strong> Сильный галлюциноген, вызывает отравление с тяжелыми последствиями.</p>
+                  </div>
+                  
+                  <div class="modal-item">
+                      <h5>2. Бледная поганка (Amanita phalloides)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/pale grebe.jpg" alt="Поганка">
+                      <p><strong>Описание:</strong> Шляпка оливковая или зеленоватая, пластинки белые, ножка с мешковидным влагалищем.</p>
+                      <p><strong>Место обитания:</strong> Лиственные леса, особенно под дубами и буками.</p>
+                      <p><strong>Опасность:</strong> Самый ядовитый гриб в Европе, смертельно опасен даже в малых дозах.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>3. Свинушка тонкая (Paxillus involutus)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/svinuha.jpg" alt="Свинушка">
+                      <p><strong>Описание:</strong> Коричневая воронковидная шляпка с загнутыми краями. Растет под ивами.</p>
+                      <p><strong>Место обитания:</strong> Под ивами и другими лиственными деревьями вдоль берегов.</p>
+                      <p><strong>Опасность:</strong> ЯДОВИТА! Раньше считалась условно-съедобной, но вызывает тяжелые отравления.</p>
+                  </div>
+              </div>
+              
+              <div class="modal-section">
+                  <h4 class="edible-title">СЪЕДОБНЫЕ ГРИБЫ</h4>
+                  
+                  <div class="modal-item">
+                      <h5>1. Опёнок осенний (Armillaria mellea)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/opyata.jpg" alt="Опенок">
+                      <p><strong>Описание:</strong> Шляпка желто-коричневая, ножка тонкая с белым кольцом, растет группами.</p>
+                      <p><strong>Место обитания:</strong> На пнях, корнях и стволах лиственных деревьев.</p>
+                      <p><strong>Интересный факт:</strong> Может образовывать гигантские грибницы - самые большие организмы на Земле.</p>
+                  </div>
+                  
+                  <div class="modal-item">
+                      <h5>2. Белый гриб (Boletus edulis)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/beliy.jpg" alt="Белый гриб">
+                      <p><strong>Описание:</strong> Коричневая шляпка, толстая белая ножка, мякоть не темнеет при разрезе.</p>
+                      <p><strong>Место обитания:</strong> Хвойные и смешанные леса, образует микоризу с деревьями.</p>
+                      <p><strong>Интересный факт:</strong> Считается "царем грибов" за превосходные вкусовые качества.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>3. Навозник серый и белый (Coprinus atramentarius, Coprinus comatus)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/navoznik.jfif" alt="Навозник">
+                      <p><strong>Описание:</strong> Серый или белый гриб с колокольчатой шляпкой, которая со временем чернеет и расплывается.</p>
+                      <p><strong>Место обитания:</strong> Массово на лугах после дождей (май–июнь и сентябрь).</p>
+                      <p><strong>Опасность:</strong> Съедобен только в молодом возрасте, но несовместим с алкоголем!</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>4. Дождевки (Lycoperdon spp.)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/dojdevik.jpg" alt="Дождевка">
+                      <p><strong>Описание:</strong> Белые шарики на лугах, при созревании выбрасывают споры через отверстие сверху.</p>
+                      <p><strong>Место обитания:</strong> Луга и поляны вдоль берегов Турунчука.</p>
+                      <p><strong>Интересный факт:</strong> Молодые грибы съедобны, но собирать нужно с осторожностью - легко спутать с ядовитыми.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>5. Шампиньон полевой (Agaricus campestris)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/shampinion.jpg" alt="Шампиньон">
+                      <p><strong>Описание:</strong> Белая шляпка с розовыми, затем коричневыми пластинками. Ножка с кольцом.</p>
+                      <p><strong>Место обитания:</strong> На сухих местах у берега, на лугах и пастбищах.</p>
+                      <p><strong>Интересный факт:</strong> Один из самых популярных съедобных грибов, но нужно отличать от ядовитых двойников.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>6. Опёнок летний (Kuehneromyces mutabilis)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/opyata.jpg" alt="Опенок летний">
+                      <p><strong>Описание:</strong> Растет на старых ивах. Шляпка медово-коричневая, ножка с кольцом.</p>
+                      <p><strong>Место обитания:</strong> На пнях и стволах лиственных деревьев, особенно ив.</p>
+                      <p><strong>Интересный факт:</strong> Появляется уже в начале лета, в отличие от осеннего опёнка.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>7. Гигрофоры (Hygrophorus spp.)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/hyghyp11.jpg" alt="Гигрофор">
+                      <p><strong>Описание:</strong> Влажные, восковые грибы с клейкой шляпкой. Различных цветов - белые, желтые, розовые.</p>
+                      <p><strong>Место обитания:</strong> В траве у воды, на влажных лугах вдоль Турунчука.</p>
+                      <p><strong>Интересный факт:</strong> Название происходит от греческого "влагоносный" - грибы всегда влажные на ощупь.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>8. Зонтик пёстрый (Macrolepiota procera)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/zontikc.jfif" alt="Зонтик">
+                      <p><strong>Описание:</strong> Крупный гриб с чешуйчатой шляпкой, похожей на зонтик. Ножка с кольцом.</p>
+                      <p><strong>Место обитания:</strong> На открытых лугах в августе-сентябре.</p>
+                      <p><strong>Интересный факт:</strong> Съедобен, но нужно отличать от ядовитых двойников. Шляпка может достигать 30 см в диаметре.</p>
+                  </div>
+
+                  <div class="modal-item">
+                      <h5>9. Маслёнок лиственничный (Suillus grevillei)</h5>
+                      <img src="../../../images/content/attractions/turunchuk/maslenoklistv0.png" alt="Маслёнок">
+                      <p><strong>Описание:</strong> Желто-коричневая клейкая шляпка, ножка с кольцом. Растет под отдельными соснами на высоком берегу.</p>
+                      <p><strong>Место обитания:</strong> Под соснами на возвышенных участках вдоль Турунчука.</p>
+                      <p><strong>Интересный факт:</strong> Образует микоризу с лиственницей и сосной. Съедобен после удаления кожицы со шляпки.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  <section id="turunchuk-map-section">
+    <div id="turunchukMap"></div>
+  </section>
+
+  <div class="routespage__header-outer">
+    <div class="routespage__header">
+      <h2 class="routespage__title">Приднестровье - это край, где плещется Днестр и молчат древние холмы</h2>
+    </div>
+  </div>
+  
+  <footer id="footer" class="footer">
+    <div class="footer__container">
+      
+      <!-- Колонка 1: Логотип -->
+      <div class="footer__column-logo">
+        <div class="footer__logo">EcoTravel</div>
+          <div class="footer__link">© Все права защищены, Войцеховская</div>
+          <div class="footer__link">Сайт создан в рамках курсовой работы как учебный проект.</div>
+      </div>
+
+      <!-- Колонка 2: Навигация -->
+      <div class="footer__column-nav">
+        <h3 class="footer__nav-title">НАВИГАЦИЯ</h3>
+        <nav class="footer__nav">
+          <a href="../../../index.html" class="footer__link">Главная</a>
+          <a href="../../../pages/routes-page/index.html" class="footer__link">Маршруты</a>
+          <a href="../../../pages/region-map/index.html" class="footer__link">Карта региона</a>
+          <a href="../../../pages/attraction-page/index.html" class="footer__link">Достопримечательности</a>
+          <a href="../../../pages/tips-page/index.html" class="footer__link">Советы путешественникам</a>
+          <a href="../../../index.html#about" class="footer__link">О нас</a>
+          <a href="../../../index.html#contact" class="footer__link">Контакты</a>
+        </nav>
+      </div>
+
+      <!-- Колонка 3: Контакты (адрес и режим работы) -->
+      <div class="footer__column-contacts">
+        <h3 class="footer__contacts-title">КОНТАКТЫ</h3>
+        <div class="footer__address-block">
+          <p class="footer__address-label">Наш адрес</p>
+          <p class="footer__address-text">Приднестровье, г. Тирасполь</p>
+        </div>
+        <div class="footer__hours-block">
+          <p class="footer__hours-label">Режим работы</p>
+          <p class="footer__hours-item">ПН-ВС: 09:00-18:00</p>
+        </div>
+      </div>
+
+      <!-- Колонка 4: Телефон + Почта + Соцсети -->
+      <div class="footer__column-right">
+        <div class="footer__phone-block">
+          <p class="footer__phone">77993307</p>
+          <a href="mailto:ecotravel_forever228@mail.ru" class="footer__email">ecotravel_forever228@mail.ru</a>
+        </div>
+        <div>
+          <p class="footer__socials-label">Мы в соц сетях</p>
+          <div class="footer__socials">
+            <a href="https://vk.com/feed"><img src="../../../images/common/icons/vk.png" alt="VK" class="footer__icon"></a>
+            <a href="https://www.instagram.com/"><img src="../../../images/common/icons/inst.png" alt="Instagram" class="footer__icon"></a>
+            <a href="https://www.facebook.com/?locale=ru_RU"><img src="../../../images/common/icons/facebook.png" alt="Facebook" class="footer__icon"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное окно избранного -->
+  <div id="modal-favorites" class="modal">
+    <div class="modal__content modal__content--favorites">
+      <span class="modal__close">&times;</span>
+      <h2 class="modal__title">Мои избранные</h2>
+      <div id="favorites-content" class="favorites-content">
+        <p class="favorites-empty">У вас пока нет избранных элементов</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно для просмотра больших изображений -->
+  <div id="modal-image-viewer" class="modal modal-image-viewer">
+    <div class="modal__content modal__content--image">
+      <span class="modal__close">&times;</span>
+    <img id="modal-image-viewer-img" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" alt="Просмотр изображения" class="modal-image-viewer__img">
+    </div>
+  </div>
+
+  <script src="../../../scripts/utils/favorites.js"></script>
+  <script src="../../../scripts/utils/favorites-modal.js"></script>
+  <script src="../../../scripts/utils/image-viewer.js"></script>
+  <script src="turunchuk.js"></script>
+  <script>
+  function toggleMenu() {
+      document.querySelector('.burger-menu').classList.toggle('active');
+      document.querySelector('.nav__list').classList.toggle('active');
+  }
+  document.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+          document.querySelector('.burger-menu').classList.remove('active');
+          document.querySelector('.nav__list').classList.remove('active');
+      });
+  });
+  </script>
+      </body>
+</html>
+
+
+
+

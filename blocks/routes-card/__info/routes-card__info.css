@@ -1,0 +1,23 @@
+/* Routes card info element */
+.routes-card__info {
+  position: absolute;
+  top: 245px; 
+  left: 41px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+@media (max-width: 768px) {
+  .routes-card__info {
+    position: static;
+    top: auto;
+    left: auto;
+    flex-direction: column;
+    gap: 6px;
+    flex-wrap: nowrap;
+    margin: 0 0 14px 0;
+  }
+}

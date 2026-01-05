@@ -1,0 +1,55 @@
+/* Block: attraction-card — Nested BEM */
+/* Import element styles first */
+@import url('./__overlay/attraction-card__overlay.css');
+@import url('./__content/attraction-card__content.css');
+@import url('./__name/attraction-card__name.css');
+@import url('./__desc/attraction-card__desc.css');
+@import url('./__btn/attraction-card__btn.css');
+@import url('./__quick/attraction-card__quick.css');
+@import url('./__favorite-btn/attraction-card__favorite-btn.css');
+
+/* Import modifiers */
+@import url('./--yagorlyk/attraction-card--yagorlyk.css');
+@import url('./--grape/attraction-card--grape.css');
+@import url('./--park/attraction-card--park.css');
+
+.attraction-card {
+  position: relative;
+  width: 357px;
+  height: 497px;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: staggerFadeIn 0.8s ease-out backwards;
+}
+
+/* Stagger эффект для карточек — каждая появляется с задержкой */
+.attraction-card:nth-child(1) { animation-delay: 0.1s; }
+.attraction-card:nth-child(2) { animation-delay: 0.2s; }
+.attraction-card:nth-child(3) { animation-delay: 0.3s; }
+.attraction-card:nth-child(4) { animation-delay: 0.4s; }
+.attraction-card:nth-child(5) { animation-delay: 0.5s; }
+.attraction-card:nth-child(6) { animation-delay: 0.6s; }
+
+.attraction-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.35), 0 0 30px rgba(75, 153, 178, 0.2);
+}
+
+@media (max-width: 768px) {
+  .attraction-card {
+    width: 100%;
+    max-width: 357px;
+    height: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .attraction-card:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,5 @@
+/* Element: image-viewer__image */
+.image-viewer__img {
+  max-width: 100%;
+  display: block;
+}

@@ -1,0 +1,18 @@
+/* Attraction card name element */
+.attraction-card__name {
+  position: static;
+  margin: 0 0 8px 0;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #FFFFFF;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.85);
+}
+
+@media (max-width: 768px) {
+  .attraction-card__name {
+    margin: 0 0 10px 0;
+  }
+}
+

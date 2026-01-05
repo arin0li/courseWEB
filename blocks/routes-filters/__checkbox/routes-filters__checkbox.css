@@ -1,0 +1,19 @@
+/* Element: routes-filters__checkbox */
+.custom-checkbox,
+.custom-radio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.custom-checkbox input,
+.custom-radio input {
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"],
+.custom-radio input[type="radio"] {
+    width: 18px;
+    height: 18px;
+}

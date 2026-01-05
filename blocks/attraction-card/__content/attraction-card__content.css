@@ -1,0 +1,26 @@
+/* Attraction card content element */
+.attraction-card__content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  /* layout: stack name (top), description (middle), button (bottom) */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* preserve original left/right spacing and approximate top/bottom offsets */
+  padding: 215px 41px 30px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .attraction-card__content {
+    position: relative;
+    padding: 145px 15px 0 !important;
+    justify-content: flex-start;
+    gap: 0;
+    align-items: flex-start;
+    flex: 1;
+    min-height: 0;
+  }
+}
+
