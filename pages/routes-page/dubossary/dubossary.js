@@ -45,7 +45,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Кастомные иконки
 const parkIcon = L.icon({
-  iconUrl: 'images/parkIcon8.png',
+  iconUrl: './images/parkIcon8.png',
   iconSize: [40, 40],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
