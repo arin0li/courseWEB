@@ -63,7 +63,7 @@ const terraceIcon = L.icon({
 });
 
 const redMountainIcon = L.icon({
-  iconUrl: 'images/red.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
   iconSize: [40, 40],
   iconAnchor: [20, 40],
   popupAnchor: [0, -40]
