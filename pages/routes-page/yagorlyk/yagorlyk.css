@@ -238,6 +238,7 @@
 }
 
 .route-info h3 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     margin-bottom: 25px;
     color: #8A5C2E;
@@ -346,6 +347,7 @@
   }
   
   .sidebar-title {
+    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 16px;
     color: #8B4513;
