@@ -15,3 +15,16 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .routes-card__desc {
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    max-height: none;
+    overflow: visible;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
