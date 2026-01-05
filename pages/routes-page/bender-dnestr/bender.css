@@ -643,20 +643,23 @@
   .bender-hero {
     height: 320px !important;
     min-height: 320px !important;
-    padding: 0 20px !important;
+    padding: 0 !important;
     margin-top: 60px !important;
     justify-content: center !important;
     align-items: center !important;
+    position: relative !important;
   }
 
   .bender-hero__title {
     font-size: 32px !important;
     margin-top: 0 !important;
     text-align: center !important;
-    width: 90%;
+    width: 100%;
+    padding: 0 !important;
   }
 
   .hero-map-btn {
+    position: absolute !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     bottom: 30px !important;

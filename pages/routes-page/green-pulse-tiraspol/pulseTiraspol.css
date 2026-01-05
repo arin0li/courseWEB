@@ -748,23 +748,25 @@
     .pulse-hero {
       height: 280px !important;
       min-height: 280px !important;
-      padding: 0 20px !important;
+      padding: 0 !important;
       justify-content: center !important;
       align-items: center !important;
       margin-top: 105px !important;
+      position: relative !important;
     }
 
     .pulse-hero__title {
       font-size: 24px !important;
-      margin-top: 15px !important;
-      padding: 0 10px !important;
+      margin-top: 0 !important;
+      padding: 0 !important;
       text-align: center !important;
-      width: 90% !important;
+      width: 100% !important;
       line-height: 1.2 !important;
     }
 
     .hero-map-btn {
-    left: 50% !important;
+      position: absolute !important;
+      left: 50% !important;
       transform: translateX(-50%) !important;
       bottom: 25px !important;
       width: 200px !important;
