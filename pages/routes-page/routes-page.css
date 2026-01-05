@@ -1,28 +1,28 @@
 /* Basic styles */
-@import url('../styles/base/reset.css');
-@import url('../styles/variables/colors.css');
-@import url('../styles/base/typography.css');
-@import url('../styles/utils/helpers.css');
+@import url('../../styles/base/reset.css');
+@import url('../../styles/variables/colors.css');
+@import url('../../styles/base/typography.css');
+@import url('../../styles/utils/helpers.css');
 
 /* Common blocks */
-@import url('../blocks/header/header.css');
-@import url('../blocks/footer/footer.css');
-@import url('../blocks/modal/modal.css');
-@import url('../blocks/favorites/favorites.css');
+@import url('../../blocks/header/header.css');
+@import url('../../blocks/footer/footer.css');
+@import url('../../blocks/modal/modal.css');
+@import url('../../blocks/favorites/favorites.css');
 
 /* Specific blocks */
-@import url('../blocks/card/card.css');
-@import url('../blocks/routes-card/routes-card.css');
-@import url('../blocks/image-viewer/image-viewer.css');
-@import url('../blocks/quick-view/quick-view.css');
-@import url('../blocks/routes-pagination/routes-pagination.css');
-@import url('../blocks/routes-filters/routes-filters.css');
+@import url('../../blocks/card/card.css');
+@import url('../../blocks/routes-card/routes-card.css');
+@import url('../../blocks/image-viewer/image-viewer.css');
+@import url('../../blocks/quick-view/quick-view.css');
+@import url('../../blocks/routes-pagination/routes-pagination.css');
+@import url('../../blocks/routes-filters/routes-filters.css');
 
 
 
 @font-face {
     font-family: 'MrKindlyJasmine';
-    src: url('../assets/fonts/mr_kindlyjasmineg.otf') format('opentype');
+      src: url('../../assets/fonts/mr_kindlyjasmineg.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
