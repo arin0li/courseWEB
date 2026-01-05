@@ -7,3 +7,15 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  .routes-card__content {
+    position: relative;
+    padding: 195px  15px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
