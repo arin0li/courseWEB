@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'MrKindlyJasmine';
-  src: url('/assets/fonts/mr_kindlyjasmineg.otf') format('opentype');
+  src: url('../../assets/fonts/mr_kindlyjasmineg.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
