@@ -10,12 +10,14 @@
 @media (max-width: 768px) {
   .routes-card__content {
     position: relative;
-    padding: 195px  15px !important;
+    padding: 195px 15px 0 !important;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    justify-content: center;
+    gap: 0;
+    justify-content: flex-start;
     align-items: flex-start;
+    flex: 1;
+    min-height: 0;
   }
 }
 

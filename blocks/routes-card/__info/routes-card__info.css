@@ -15,8 +15,9 @@
     position: static;
     top: auto;
     left: auto;
-    flex-direction: row;
-    gap: 8px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 6px;
+    flex-wrap: nowrap;
+    margin: 0 0 14px 0;
   }
 }

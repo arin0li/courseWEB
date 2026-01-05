@@ -17,11 +17,16 @@
 
 @media (max-width: 768px) {
   .routes-card__btn {
-    position: static;
-    left: auto;
-    bottom: 20px;
+    position: static !important;
+    left: auto !important;
+    bottom: auto !important;
     padding: 8px 18px;
     font-size: 11px;
     align-self: flex-start;
+    margin-top: auto;
+    margin-bottom: 40px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 }

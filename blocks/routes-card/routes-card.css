@@ -46,6 +46,8 @@
     max-width: 357px;
     height: auto;
     min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
   
   .routes-card:hover {

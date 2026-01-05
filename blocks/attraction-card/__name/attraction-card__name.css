@@ -10,3 +10,9 @@
   text-shadow: 0 2px 6px rgba(0,0,0,0.85);
 }
 
+@media (max-width: 768px) {
+  .attraction-card__name {
+    margin: 0 0 10px 0;
+  }
+}
+

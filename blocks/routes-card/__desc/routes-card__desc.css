@@ -25,6 +25,8 @@
     overflow: visible;
     font-size: 12px;
     line-height: 1.5;
-    margin: 0;
+    margin: 15px  0 14px 0;
+    flex: 1 1 auto;
+    min-height: 0;
   }
 }

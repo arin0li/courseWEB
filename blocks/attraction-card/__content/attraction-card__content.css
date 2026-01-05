@@ -15,10 +15,12 @@
 @media (max-width: 768px) {
   .attraction-card__content {
     position: relative;
-    padding: 145px 15px !important;
-    justify-content: center;
-    gap: 14px;
+    padding: 145px 15px 0 !important;
+    justify-content: flex-start;
+    gap: 0;
     align-items: flex-start;
+    flex: 1;
+    min-height: 0;
   }
 }
 

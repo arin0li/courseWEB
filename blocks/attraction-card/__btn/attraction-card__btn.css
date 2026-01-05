@@ -13,3 +13,15 @@
   border-radius: 32px;
 }
 
+@media (max-width: 768px) {
+  .attraction-card__btn {
+    margin-top: auto;
+    margin-bottom: 40px;
+    padding: 8px 18px;
+    font-size: 11px;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
