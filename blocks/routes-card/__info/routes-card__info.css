@@ -9,3 +9,14 @@
   gap: 6px;
 }
 
+
+@media (max-width: 768px) {
+  .routes-card__info {
+    position: static;
+    top: auto;
+    left: auto;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+}
