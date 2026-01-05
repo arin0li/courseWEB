@@ -15,3 +15,13 @@
   border-radius: 32px;
 }
 
+@media (max-width: 768px) {
+  .routes-card__btn {
+    position: static;
+    left: auto;
+    bottom: 20px;
+    padding: 8px 18px;
+    font-size: 11px;
+    align-self: flex-start;
+  }
+}
