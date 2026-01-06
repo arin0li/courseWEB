@@ -3923,7 +3923,7 @@ body {
   bottom: 100px !important;           /* большой отступ снизу до кнопки */
   left: 3vw !important;               /* адаптивно, чуть больше на маленьких экранах */
   right: 3vw !important;
-  padding: 0 15px !important;         /* защита от обрезки */
+  padding: 0 0px !important;         /* защита от обрезки */
   box-sizing: border-box !important;
   font-size: 22px !important;         /* крупный текст */
   line-height: 1.6 !important;
