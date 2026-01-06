@@ -1624,7 +1624,7 @@ text-align: center;
 /* Отступ от шапки для баннера на мобильных и планшетах */
 @media (max-width: 1279px) {
   .kitskan-hero {
-    margin-top: 130px !important;
+    margin-top: 100px !important;
     padding-top: 40px !important;
   }
 }
